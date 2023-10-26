@@ -17,11 +17,7 @@ import NewsletterSection from '../components/NewsletterSection'
 const Home = () => {
   return (
     <>
-
-
-         <Header />  
-
-
+          <Header />  
           <ShowcaseSection />
           <SponsorSection />
           <FeatureSection />
@@ -33,10 +29,7 @@ const Home = () => {
           <TestimonialSection />
           <ArticleNewsSection />
           <NewsletterSection />
-
-          <Footer />
-
-
+          <Footer />  
     </>
   )
 }

@@ -1228,3 +1228,203 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
 .footer .element img {
   opacity: 0.6;
 }
+
+.showcase {
+  background-color: #F0eFe9;
+  position: relative;
+  z-index: 0;
+}
+.showcase .background-lines {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  .showcase .background-lines {
+    display: none;
+  }
+}
+.showcase .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.showcase .container .content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .showcase .container .content {
+    text-align: left;
+  }
+}
+.showcase .container .content .content-text {
+  display: flex;
+  justify-content: center;
+}
+.showcase .container .content .content-text a {
+  text-decoration: none;
+  color: #191919;
+}
+.showcase .container .content .content-text a:hover {
+  text-decoration: underline;
+}
+.showcase .container .content .content-text p {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 10px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content .content-text p {
+    font-size: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.showcase .container .content h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .showcase .container .content h1 {
+    font-size: 86px;
+  }
+}
+
+.contact-info .container .contact-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+@media (max-width: 1200px) {
+  .contact-info .container .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contact-info .container .contact-card .contact-card-parent {
+  display: flex;
+  border: 1px solid rgba(25, 25, 25, 0.2039215686);
+  margin: 10px;
+  padding: 50px 40px;
+  width: 100%;
+  text-decoration: none;
+  transition: 0.2s;
+}
+@media (max-width: 1200px) {
+  .contact-info .container .contact-card .contact-card-parent {
+    width: 50%;
+  }
+}
+.contact-info .container .contact-card .contact-card-parent .icon {
+  margin-right: 20px;
+}
+.contact-info .container .contact-card .contact-card-parent .icon i {
+  display: flex;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: #191919;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info .container .contact-card .contact-card-parent .contact-card-child {
+  text-decoration: none;
+}
+.contact-info .container .contact-card .contact-card-parent .contact-card-child h3 {
+  color: #191919;
+  font-family: "Dm sans";
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.contact-info .container .contact-card .contact-card-parent .contact-card-child a {
+  display: block;
+  flex-direction: column;
+  text-decoration: none;
+  color: #191919;
+  margin: 0;
+  font-family: "inter", sans-serif;
+  font-size: 18px;
+}
+.contact-info .container .contact-card .contact-card-parent .contact-card-child p {
+  display: block;
+  flex-direction: column;
+  text-decoration: none;
+  color: #191919;
+  margin: 0;
+  font-family: "inter", sans-serif;
+  font-size: 18px;
+}
+.contact-info .container .contact-card .contact-card-parent:hover {
+  background-color: #191919;
+}
+.contact-info .container .contact-card .contact-card-parent:hover i {
+  color: #191919;
+  background-color: #ffffff;
+}
+.contact-info .container .contact-card .contact-card-parent:hover h3 {
+  color: white;
+}
+.contact-info .container .contact-card .contact-card-parent:hover a {
+  color: white;
+  text-decoration: underline;
+}
+.contact-info .container .contact-card .contact-card-parent:hover p {
+  color: white;
+  text-decoration: underline;
+}
+
+.massage {
+  padding-bottom: 100px;
+}
+.massage .container {
+  background-color: #F0EFE9;
+  padding: 100px;
+}
+.massage .container .headline {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.massage .container .headline h1 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+}
+.massage .container form input {
+  width: 100%;
+  border: none;
+  margin: 10px;
+  border-radius: 25px;
+  padding: 20px 30px;
+}
+.massage .container form textarea {
+  width: 100%;
+  border: none;
+  margin: 10px;
+  border-radius: 25px;
+  padding: 20px 30px;
+  resize: none;
+  height: 160px;
+}
+.massage .container .btn-yellow {
+  margin-top: 30px;
+  padding: 20px 0;
+  width: 100%;
+  font-weight: 400;
+}
