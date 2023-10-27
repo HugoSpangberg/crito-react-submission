@@ -1,39 +1,38 @@
 import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import PrintArticle from '../components/generics/PrintArticle'
 import ArticleOne from '../assets/images/article1.png'
 import ArticleTwo from '../assets/images/article2.png'
 import ArticleThree from '../assets/images/article3.png'
-import PrintArticle from './generics/PrintArticle'
 
-
-const ArticleNewsSection = () => {
+const News = () => {
   return (
+    <>
+    <div className='wrapper-grid'>
+    <Header />
     <section className="articlenews">
       <div className="container">
-        <div className="articles-title">
-          <div className="section-title">
-            <p>Article & News</p>
-            <h2>Get Every Single Articles & News</h2>
-          </div>
-          <div className="button">
-          <button className="btn-transparent" href="articles.html">Browse Articles<i className="fa-light fa-arrow-up-right"></i></button>
-          </div>
-        </div>
+
         <div className="article">
+          <PrintArticle month="Mars" date="25" title="Business" text="How To Use Digitalization In The Classroom" image={ArticleOne} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
+          <PrintArticle month="Mars" date="17" title="Business" text="How To Implement Chat GPT In Your Projects" image={ArticleTwo} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
+          <PrintArticle month="Mars" date="13" title="Business" text="The Guide To Support Modern CSS Design" image={ArticleThree} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
           <PrintArticle month="Mars" date="25" title="Business" text="How To Use Digitalization In The Classroom" image={ArticleOne} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
           <PrintArticle month="Mars" date="17" title="Business" text="How To Implement Chat GPT In Your Projects" image={ArticleTwo} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
           <PrintArticle month="Mars" date="13" title="Business" text="The Guide To Support Modern CSS Design" image={ArticleThree} description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."/>
           
         </div>
-        <div className="dots-parent">
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div id="dots2" className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
-        </div>
       </div>
     </section>
+
+    <Footer />
+
+    </div>
+
+    
+    </>
   )
 }
 
-export default ArticleNewsSection
+export default News

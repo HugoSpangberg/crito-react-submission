@@ -993,7 +993,8 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   margin-left: 15px;
 }
 .articlenews .container .article {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 .articlenews .container .article a {
