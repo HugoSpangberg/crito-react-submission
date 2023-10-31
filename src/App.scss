@@ -10,7 +10,6 @@ html, body {
 
 }
 
-
 .wrapper-grid {
   height: 100vh;
   display: grid;
@@ -28,6 +27,7 @@ html, body {
   font-size: 16px;
   font-weight: 600;
   transition: 0.2s;
+  cursor: pointer;
 
   i {
     margin-left: 5px;
@@ -35,7 +35,6 @@ html, body {
   }
 
   &:hover {
-    border: 1px solid #191919;
     background-color: #191919;
     color: #f4f4f4;
 
@@ -43,6 +42,9 @@ html, body {
 }
 
 .btn-yellow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #F9D783;
   border: 1px solid #F9D783;
   border-radius: 25px;
@@ -52,10 +54,12 @@ html, body {
   font-size: 16px;
   font-weight: 600;
   transition: 0.2s;
+  cursor: pointer;
 
   i {
     margin-left: 5px;
     font-size: 0.9em;
+    
   }
 
   &:hover {
@@ -366,7 +370,7 @@ header {
     .section-title{
 
       margin-top: 0px;
-      margin-bottom: 0px;
+      margin-bottom: 50px;
 
       @media (max-width: 1200px) {
         text-align: center;
@@ -377,29 +381,7 @@ header {
       flex: 1;
       display: flex;
       flex-direction: column;
-      
       margin: 30px;
-      
-      
-      button {
-        
-        margin-top: 20px;
-        background-color: #F9D783;
-        border: 1px solid #F9D783;
-        border-radius: 25px;
-        padding: 12px 30px;
-        color: #191919;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        transition: .2s;
-        &:hover {
-          border: 1px solid #191919;
-          background-color: #191919;
-          color: #f4f4f4;
-      
-        }
-      }
       
     }
     .features-right {
@@ -407,13 +389,13 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 50px;
-      gap: 75px;
+      gap: 55px;
 
       @media (max-width: 992px) {
         display: block;
       }
       .features-right-child {
-        
+        margin-left: 25px;
         img {
           padding-bottom: 20px;
           fill: red;
@@ -428,6 +410,7 @@ header {
   padding-bottom: 30px;
   .container {
     display: flex;
+    padding-bottom: 70px;
     // margin: 100px;
 
     @media (max-width: 1200px) {
@@ -487,10 +470,11 @@ header {
         
       }
     }
-    .section-title {
-      margin: 0;
-      padding-left: 200px;
-      padding-right: 30px;
+    .right-content {
+      margin-left: 250px;
+      .section-title {
+        margin: 0;
+      }
 
       @media (max-width: 1200px) {
         text-align: center;
@@ -693,6 +677,11 @@ header {
               transition: 0.2s;
               cursor: pointer;
               
+              &:hover {
+                background-color: #ffffff;
+                border: 1px solid #191919;
+                color: #191919;
+              }
 
               i {
                 margin: 0;
@@ -709,11 +698,6 @@ header {
           &:hover {
             background-color: #F9D783;
   
-            .btn-transparent {
-              background-color: #ffffff;
-              border: 1px solid #191919;
-              color: #191919;
-            }
             .content {
               h3 {
                 text-decoration: underline;
@@ -1247,28 +1231,32 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     h2 {
       font-family: 'DM Sans', sans-serif;
       font-size: 45px;
       font-weight: 700;
     }
     form {
+      display: flex;
+
       input {
-        border-radius: 25px;
+        border-radius: 30px;
         padding: 12px 30px;
+        
         color: #191919;
         text-decoration: none;
         font-size: 16px;
 
 
-        border-radius: 25px;
+
         outline: none;
         border: 1px solid rgb(25, 25, 25, 0.10);
         margin-right: 20px;
         
       }
       button {
-        margin-top: 10px;
+
       }
     }
   }
@@ -1356,6 +1344,12 @@ header {
       display: flex;
       justify-content: space-between;
 
+      @media (max-width: 992px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       h6 {
         font-size: 16px;
         font-family: 'inter';
@@ -1365,6 +1359,8 @@ header {
 
       .socialmedia-bar-bottom {
         display: flex;
+
+
 
         .animation {
           color: #ede9e9;

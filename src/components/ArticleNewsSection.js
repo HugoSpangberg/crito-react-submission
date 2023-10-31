@@ -3,6 +3,8 @@ import ArticleOne from '../assets/images/article1.png'
 import ArticleTwo from '../assets/images/article2.png'
 import ArticleThree from '../assets/images/article3.png'
 import PrintArticle from './generics/PrintArticle'
+import { Link } from 'react-router-dom'
+import PrintSectionTitle from './generics/PrintSectionTitle'
 
 
 const ArticleNewsSection = () => {
@@ -11,11 +13,10 @@ const ArticleNewsSection = () => {
       <div className="container">
         <div className="articles-title">
           <div className="section-title">
-            <p>Article & News</p>
-            <h2>Get Every Single Articles & News</h2>
+            <PrintSectionTitle section="Article & News" title="Get Every Single Articles & News"/>
           </div>
           <div className="button">
-          <button className="btn-transparent" href="articles.html">Browse Articles<i className="fa-light fa-arrow-up-right"></i></button>
+          <Link to="/News"><button className="btn-transparent">Browse Articles<i className="fa-light fa-arrow-up-right"></i></button></Link>
           </div>
         </div>
         <div className="article">

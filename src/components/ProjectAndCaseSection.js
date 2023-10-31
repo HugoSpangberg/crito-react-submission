@@ -3,6 +3,7 @@ import imageOne from '../assets/images/Image-3.png'
 import imageTwo from '../assets/images/Image-5.png'
 import imageThree from '../assets/images/Image-4.png'
 import imagefour from '../assets/images/Image-6.png'
+import PrintSectionTitle from './generics/PrintSectionTitle'
 
 
 
@@ -10,10 +11,7 @@ const ProjectAndCaseSection = () => {
   return (
     <section className="project-and-case">
       <div className="container">
-        <div className="section-title">
-          <p>Project & Case Studies</p>
-          <h2>Let’s Looks Our Global Projects</h2>
-        </div>
+        <PrintSectionTitle section="Project & Case Studies" title="Let’s Looks Our Global Projects"/>
         <div className="project-and-cases">
           <article className="project-parent">
             <div className="project-child">

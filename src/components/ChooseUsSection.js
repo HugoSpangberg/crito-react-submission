@@ -1,42 +1,19 @@
 import React from 'react'
 import chooseUs from '../assets/images/choose-us.png'
+import PrintChooseUs from './generics/PrintChooseUs'
+import PrintSectionTitle from './generics/PrintSectionTitle'
 
 const ChooseUsSection = () => {
   return (
     <section className="choose-us">
     <div className="container">
       <div className="section-title">
-        <p>Why Choose Us</p>
-        <h2>Why We Are The Best Business Consulting Agency</h2>
+        <PrintSectionTitle section="Why Choose Us" title="Why We Are The Best Business Consulting Agency"/>
         <div className="strategies">
-          <div className="strategies-parent">
-            <i className="fa-light fa-thumbs-up"></i>
-            <div className="strategies-child">
-              <h4>Process Excellence</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
-          <div className="strategies-parent">
-            <i className="fa-light fa-hexagon-check"></i>
-            <div className="strategies-child">
-              <h4>Strategic Planning</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
-          <div className="strategies-parent">
-            <i className="fa-light fa-pen-nib"></i>
-            <div className="strategies-child">
-              <h4>Experience Design</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
-          <div className="strategies-parent">
-            <i className="fa-light fa-head-side-gear"></i>
-            <div className="strategies-child">
-              <h4>Artificial Inteligence</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur.</p>
-            </div>
-          </div>
+          <PrintChooseUs title="Process Excellence" text="Lorem, ipsum dolor sit amet consectetur" icon="fa-light fa-thumbs-up" />
+          <PrintChooseUs title="Strategic Planning" text="Lorem, ipsum dolor sit amet consectetur" icon="fa-light fa-hexagon-check" />
+          <PrintChooseUs title="Experience Design" text="Lorem, ipsum dolor sit amet consectetur" icon="fa-light fa-pen-nib" />
+          <PrintChooseUs title="Artificial Inteligence" text="Lorem, ipsum dolor sit amet consectetur" icon="fa-light fa-head-side-gear" />
         </div>
       </div>
       <div className="background">

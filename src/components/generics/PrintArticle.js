@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PrintArticle = ({date, month, image, title, text, description}) => {
   return (
-    <a href="articleNews.html">
+    <Link to="/News">
     <div className="article-section">
       <div className="image-date">
         <div className="date">
@@ -15,7 +16,7 @@ const PrintArticle = ({date, month, image, title, text, description}) => {
       <h3>{text}</h3>
       <p>{description}</p>
     </div>
-  </a>
+  </Link>
   )
 }
 

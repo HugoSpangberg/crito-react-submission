@@ -2,6 +2,7 @@ import React from 'react'
 import ClientOne from '../assets/images/client1.png'
 import ClientTwo from '../assets/images/client2.png'
 import ClientThree from '../assets/images/client3.png'
+import PrintSectionTitle from './generics/PrintSectionTitle'
 
 
 
@@ -9,10 +10,7 @@ const TestimonialSection = () => {
   return (
     <section className="testimonial">
       <div className="container">
-          <div className="section-title">
-            <p>Testimonial</p>
-            <h2>What Our Client Says</h2>
-          </div>
+          <PrintSectionTitle section="Testimonial" title="What Our Client Says"/>
           <div className="clients">
             <div className="clients-parent">
               <i className="fa-sharp fa-solid fa-star"></i>

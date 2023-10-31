@@ -1,6 +1,7 @@
 import React from 'react'
 import element from '../assets/images/Element.svg'
 import manWithTablet from '../assets/images/man-with-tablet.svg'
+import Buttons from './generics/Buttons'
 
 const ShowcaseSection = () => {
   return (
@@ -11,8 +12,8 @@ const ShowcaseSection = () => {
           <div className="content">
             <h1>We provide The Best business solutions</h1>
             <p>Establish your vision and value proposition and turn them into testable prototypes.</p>
-            <a className="btn-yellow" href="consulting.html">Get Consulting<i className="fa-light fa-arrow-up-right"></i></a>
-            <a className="btn-transparent" href="service.html">Learn More<i className="fa-light fa-arrow-up-right"></i></a>
+            <Buttons type='yellow' title='Get Consulting'/>
+            <Buttons type='transparent' title='Learn More'/>
           </div>
           <img src={manWithTablet} alt="showcase img of a man"/>
         </div>

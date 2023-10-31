@@ -3,6 +3,7 @@ import personOne from '../assets/images/person1.png'
 import personTwo from '../assets/images/person2.png'
 import personThree from '../assets/images/person3.png'
 import personFour from '../assets/images/person4.png'
+import PrintSectionTitle from './generics/PrintSectionTitle'
 
 
 
@@ -12,8 +13,7 @@ const MeetOurTeamSection = () => {
       <div className="container">
         <div className="team-member">
           <div className="section-title">
-            <p>Meet Our Team</p>
-            <h2>Experience Team Members</h2>
+            <PrintSectionTitle section="Meet Our Team" title="Experience Team Members"/>
           </div>
           <a className="btn-yellow" href="#">Browse Team<i className="fa-light fa-arrow-up-right"></i></a>
         </div>
