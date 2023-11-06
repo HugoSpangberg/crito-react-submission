@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
+
+
 
 const PrintArticle = ({date, month, image, title, text, description}) => {
+
+  
   return (
     <Link to="/News">
     <div className="article-section">

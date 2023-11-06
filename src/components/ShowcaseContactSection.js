@@ -3,11 +3,11 @@ import element from '../assets/images/Element.svg'
 
 const ShowcaseContactSection = () => {
   return (
-    <section class="showcase">
-    <img class="background-lines" src={element} alt=""/>
-    <div class="container">
-      <div class="content">
-        <div class="content-text">
+    <section className="showcase">
+    <img className="background-lines" src={element} alt=""/>
+    <div className="container">
+      <div className="content">
+        <div className="content-text">
           <a href="index.html"><p>Home</p></a>
           <a href="contact.html"><p>Contact</p></a>
         </div>
