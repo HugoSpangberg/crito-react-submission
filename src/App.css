@@ -61,6 +61,24 @@ html, body {
   color: #f4f4f4;
 }
 
+.btn-yellow:disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9D783;
+  border: 1px solid #F9D783;
+  border-radius: 25px;
+  padding: 12px 30px;
+  color: #191919;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-yellow:disabled i {
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+
 .btn-black {
   background-color: #191919;
   border: 1px solid #191919;
@@ -1420,8 +1438,15 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   resize: none;
   height: 160px;
 }
+.massage .container form p {
+  height: 30px;
+  color: #1b881b;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 .massage .container .btn-yellow {
-  margin-top: 30px;
+  margin: 30px 10px;
   padding: 20px 0;
   width: 100%;
   font-weight: 400;
