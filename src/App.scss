@@ -1266,20 +1266,13 @@ header {
       input {
         border-radius: 30px;
         padding: 12px 30px;
-        
         color: #191919;
         text-decoration: none;
         font-size: 16px;
-
-
-
         outline: none;
         border: 1px solid rgb(25, 25, 25, 0.10);
         margin-right: 20px;
         
-      }
-      button {
-
       }
     }
   }
@@ -1617,6 +1610,17 @@ header {
     }
     form {
       
+
+      .error::placeholder {
+        color: red;
+      }
+      .error {
+        color: red;
+        border: 1px solid red;
+
+
+      }
+
       input {
 
         width: 100%;
@@ -1624,6 +1628,9 @@ header {
         margin: 10px;
         border-radius: 25px;
         padding: 20px 30px;
+        
+
+      
 
       }
       textarea {

@@ -1131,6 +1131,7 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   border: 1px solid rgba(25, 25, 25, 0.1);
   margin-right: 20px;
 }
+
 .footer {
   background-color: #0E1021;
   color: #191919;
@@ -1421,6 +1422,16 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   font-weight: 700;
   text-align: center;
   width: 40%;
+}
+.massage .container form .error::-moz-placeholder {
+  color: red;
+}
+.massage .container form .error::placeholder {
+  color: red;
+}
+.massage .container form .error {
+  color: red;
+  border: 1px solid red;
 }
 .massage .container form input {
   width: 100%;
