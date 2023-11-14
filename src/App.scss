@@ -1609,16 +1609,46 @@ header {
 
     }
     form {
-      
 
-      .error::placeholder {
-        color: red;
-      }
-      .error {
-        color: red;
+      .error-bar {
+        background-color: rgb(255, 247, 247);
         border: 1px solid red;
+      }
+      .error-message {
+        display: flex;
+        color: red;
+        justify-content: left;
+        font-size: 1.1rem;
+        margin-left: 40px;
+
+        i {
+          margin-left: 0.2rem;
+        }
+      }
+      .error-message-middle {
+        display: flex;
+        color: red;
+        justify-content: center;
+        font-size: 1.1rem;
 
 
+        i {
+          margin-left: 0.2rem;
+        }
+      }
+      .hidden-box {
+        height: 3rem;
+      }
+      .message-sent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+
+          color: rgb(36, 162, 36);
+          font-size: 3rem;
+
+        }
       }
 
       input {
@@ -1628,9 +1658,6 @@ header {
         margin: 10px;
         border-radius: 25px;
         padding: 20px 30px;
-        
-
-      
 
       }
       textarea {
@@ -1643,18 +1670,9 @@ header {
         resize: none;
         height: 160px;
       }
-
-      p {
-        height: 30px;
-        color: #1b881b;
-        display: flex;
-        justify-content: center;
-        margin: 20px;
-      }
     }
     .btn-yellow {
       margin: 30px 10px;
-
       padding: 20px 0;
       width: 100%;
       font-weight: 400;

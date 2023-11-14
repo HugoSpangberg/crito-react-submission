@@ -6,11 +6,15 @@ export const MassageSection = () => {
   const [email, setEmail] = useState ('')
   const [emailError, setEmailError] = useState (false)
   const [message, setMessage] = useState ('')
+  const [messageError, setMessageError] = useState (false)
   const [buttonDisabled, setButtonDisabled] = useState ('')
   const [messageSent, setMessageSent] = useState ('')
   const [errorMessage, setErrorMessage] = useState ('')
 
   const handleChange = (e) => {
+    setMessageSent('')
+    setErrorMessage('')
+
 
     switch (e.target.name) {
       case 'name':
@@ -21,9 +25,14 @@ export const MassageSection = () => {
       case 'email':
         setEmail(e.target.value)
         setEmailError(validateLength(e.target.value, 3))
+
+
         break;
       case 'message':
         setMessage(e.target.value)
+        setMessageError(validateLength(e.target.value, 10))
+
+
         break;
     }
   }
@@ -43,39 +52,70 @@ export const MassageSection = () => {
       switch (element.name) {
         case 'name':
           setName(element.value)
-          setName('')
           setNameError(validateLength(element.value, 2))
 
           break;
         case 'email':
           setEmail(element.value)
-          setEmail('')
           setEmailError(validateLength(element.value, 3))
-
           break;
         case 'message':
           setMessage(element.value)
+          setMessageError(validateLength(element.value, 10))
           break;
       }
     }
-    if (!nameError && !emailError) {
-
-        const sendMessage = { name, email, message }
-        const json = JSON.stringify(sendMessage)
-
-        const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+    if(!nameError && !emailError && !messageError){
+      const result = await fetch ('https://win23-assignment.azurewebsites.net/api/contactform',{
         method: 'post',
         headers: {
-          'content-type': 'application/json',
+          'content-type': 'application/json'
         },
-        body: json,
-    })
-    if (result.status === 200)
-        alert('lyckades skicka iväg')
-      else
-      setErrorMessage('nu gick det fel')
+        body: JSON.stringify({
+          name, email, message
+        })
+      })
+      switch (result.status) {
+        case 200:
+          console.log(result)
+          setMessageSent('Send')
+          setName('')
+          setEmail('')
+          setMessage('')
+          break;
+        case 400:
+          
+          setErrorMessage('Please fill in all the required fields.')
+          break
+      }      
     }
   }
+
+  return (
+    <section className="massage">
+    <div className="container">
+      <div className="headline">
+        <h1>Leave us a message 
+          for any information.</h1>
+      </div>
+      <form onSubmit={handleSubmit} noValidate>
+
+        <input className={` ${nameError ? 'error-bar' : ''}`} type="text" name='name'  placeholder={'Name*'} value={name} onChange={(e) => handleChange(e)}/>
+        <label className={` ${nameError ? 'error-message' : ''}`}>{` ${nameError ? 'Please provide your name. It cannot be empty.' : ''}`}</label>
+        <input className={` ${emailError ? 'error-bar' : ''}`} type="email" name='email'  placeholder={'Email*'} value={email} onChange={(e) => handleChange(e)}/>
+        <label className={` ${emailError ? 'error-message' : ''}`}>{` ${emailError ? 'Please enter a valid email address with at least 3 characters.' : ''}`}</label>
+        <textarea className={` ${messageError ? 'error-bar' : ''}`} type='textarea' name='message' placeholder="Your Massage*" value={message} onChange={(e) => handleChange(e)}></textarea>
+        <label className={` ${messageError ? 'error-message' : ''}`}>{` ${messageError ? 'Please write a message with at least 10 characters.' : ''}`}</label>
+        <button type="submit" className={`btn-yellow` }>Send Message<i className="fa-light fa-arrow-up-right"></i></button>
+        <div className={`${errorMessage ? 'error-message-middle' : ''}${messageSent ? 'message-sent' : ''}`}>
+          <p>{errorMessage}<i className={` ${errorMessage ? 'fa-solid fa-triangle-exclamation' : ''}`}></i></p>
+          <i className={`${messageSent ? 'fa-sharp fa-solid fa-circle-check' : ''}`}></i>
+        </div>
+      </form>
+    </div>
+  </section>
+  )
+}
 
   // const buttonChange = () => {
   //   if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {  // om name, email eller message INTE (!==) är lika med en tom sträng('').Så hoppar den in i Else. Så blir det sant.
@@ -153,24 +193,76 @@ export const MassageSection = () => {
   //       break;
   //   }
   // };
-  return (
-    <section className="massage">
-    <div className="container">
-      <div className="headline">
-        <h1>Leave us a message 
-          for any information.</h1>
-      </div>
-      <form onSubmit={handleSubmit} noValidate>
+  
 
-        <input type="text" name='name' className={`${nameError ? 'error' : ''}`} placeholder={` ${nameError ? "Oops! Please check the name you entered and make sure it's correct." : 'Name*'}`} value={name} onChange={(e) => handleChange(e)}/>
+  //--------ny-----------
+    // const handleChange = (e) => {
 
-        <input type="email" name='email' className={`${emailError ? 'error' : ''}`} placeholder={` ${emailError ? "Oops! Please check the email address you entered and make sure it's correct." : 'Email*'}`} value={email} onChange={(e) => handleChange(e)}/>
-        <textarea type='textarea' name='message' placeholder="Your Massage*" value={message} onChange={(e) => handleChange(e)}></textarea>
-        <p>{errorMessage}</p>
-        <button type="submit" className={`btn-yellow` }>Send Message<i className="fa-light fa-arrow-up-right"></i></button>
-        <p>{messageSent}</p>
-      </form>
-    </div>
-  </section>
-  )
-}
+  //   switch (e.target.name) {
+  //     case 'name':
+  //       setName(e.target.value)
+  //       setNameError(validateLength(e.target.value, 2))
+
+
+  //       break;
+  //     case 'email':
+  //       setEmail(e.target.value)
+  //       setEmailError(validateLength(e.target.value, 3))
+
+  //       break;
+  //     case 'message':
+  //       setMessage(e.target.value)
+  //       break;
+  //   }
+  // }
+
+  // const validateLength = (value, minLength = 1) => {
+  //   if (value.length < minLength)
+  //     return true
+  //   return false
+  // }
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+
+
+
+
+  //   for(let element of e.target) {
+  //     switch (element.name) {
+  //       case 'name':
+  //         setName(element.value)
+
+  //         setNameError(validateLength(element.value, 2))
+
+  //         break;
+  //       case 'email':
+  //         setEmail(element.value)
+
+  //         setEmailError(validateLength(element.value, 3))
+
+  //         break;
+  //       case 'message':
+  //         setMessage(element.value)
+
+  //         break;
+  //     }
+  //   }
+  //   if (!nameError && !emailError) {
+
+  //       const sendMessage = { name, email, message }
+  //       const json = JSON.stringify(sendMessage)
+
+  //       const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+  //       method: 'post',
+  //       headers: {
+  //         'content-type': 'application/json',
+  //       },
+  //       body: json,
+  //   })
+  //   if (result.status === 200)
+  //       setMessageSent('skickades')
+  //     else
+  //     setErrorMessage('nu gick det fel')
+  //   }
+  // }

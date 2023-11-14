@@ -1423,15 +1423,40 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   text-align: center;
   width: 40%;
 }
-.massage .container form .error::-moz-placeholder {
-  color: red;
-}
-.massage .container form .error::placeholder {
-  color: red;
-}
-.massage .container form .error {
-  color: red;
+.massage .container form .error-bar {
+  background-color: rgb(255, 247, 247);
   border: 1px solid red;
+}
+.massage .container form .error-message {
+  display: flex;
+  color: red;
+  justify-content: left;
+  font-size: 1.1rem;
+  margin-left: 40px;
+}
+.massage .container form .error-message i {
+  margin-left: 0.2rem;
+}
+.massage .container form .error-message-middle {
+  display: flex;
+  color: red;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.massage .container form .error-message-middle i {
+  margin-left: 0.2rem;
+}
+.massage .container form .hidden-box {
+  height: 3rem;
+}
+.massage .container form .message-sent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.massage .container form .message-sent i {
+  color: rgb(36, 162, 36);
+  font-size: 3rem;
 }
 .massage .container form input {
   width: 100%;
@@ -1448,13 +1473,6 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   padding: 20px 30px;
   resize: none;
   height: 160px;
-}
-.massage .container form p {
-  height: 30px;
-  color: #1b881b;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
 }
 .massage .container .btn-yellow {
   margin: 30px 10px;
