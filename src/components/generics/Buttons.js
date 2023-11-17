@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -19,7 +20,7 @@ const Buttons = ({type, url, title}) => {
   
   
   return (
-    <a className={getButtonStyle()} href={url}>{title} <i className="fa-light fa-arrow-up-right"></i></a>
+    <NavLink className={getButtonStyle()} to={url}>{title} <i className="fa-light fa-arrow-up-right"></i></NavLink>
   )
 }
 

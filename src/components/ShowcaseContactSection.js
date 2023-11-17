@@ -1,5 +1,6 @@
 import React from 'react'
 import element from '../assets/images/Element.svg'
+import { NavLink } from 'react-router-dom'
 
 const ShowcaseContactSection = () => {
   return (
@@ -8,8 +9,8 @@ const ShowcaseContactSection = () => {
     <div className="container">
       <div className="content">
         <div className="content-text">
-          <a href="index.html"><p>Home</p></a>
-          <a href="contact.html"><p>Contact</p></a>
+          <NavLink to="/"><p>Home</p></NavLink>
+          <NavLink to="/Contacts"><p>Contact</p></NavLink>
         </div>
         <h1>Let’s Connect</h1>
       </div>

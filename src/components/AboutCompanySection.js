@@ -15,9 +15,7 @@ const AboutCompanySection = () => {
           </div>
         </div>
         <div className='right-content'>
-        <PrintSectionTitle section="About Company" title="We Are Business Consulting & Credit Repair Experts"/>
-
-        
+        <PrintSectionTitle section="About Company" title="We Are Business Consulting & Credit Repair Experts"/>        
             <h6>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Quisquam officiis quas assumenda esse obcaecati? 
@@ -26,7 +24,6 @@ const AboutCompanySection = () => {
             amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci 
             accusantium libero provident voluptate amet.
           </h6>
-
         <div className="buttons-flex">
             <div className="buttons">
               <Buttons type='black' title='Learn More' url=''/>

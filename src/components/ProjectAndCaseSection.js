@@ -4,6 +4,8 @@ import imageTwo from '../assets/images/Image-5.png'
 import imageThree from '../assets/images/Image-4.png'
 import imagefour from '../assets/images/Image-6.png'
 import PrintSectionTitle from './generics/PrintSectionTitle'
+import PrintProject from './generics/PrintProject'
+import Buttons from './generics/Buttons'
 
 
 
@@ -13,45 +15,14 @@ const ProjectAndCaseSection = () => {
       <div className="container">
         <PrintSectionTitle section="Project & Case Studies" title="Let’s Looks Our Global Projects"/>
         <div className="project-and-cases">
-          <article className="project-parent">
-            <div className="project-child">
-              <img src={imageOne} alt=""/>
-            <h3>Grow your business</h3>
-            </div>
-            <div className="link">
-              <a href="#">Read More <i className="fa-light fa-arrow-up-right"></i></a>
-            </div>
-          </article>
-          <article className="project-parent">
-            <div className="project-child">
-              <img src={imageTwo} alt=""/>
-              <h3>Why your client needs a responsive website</h3>
-            </div>
-            <div className="link">
-              <a href="#">Read More <i className="fa-light fa-arrow-up-right"></i></a>
-            </div>
-          </article>
-          <article className="project-parent">
-            <div className="project-child">
-              <img src={imageThree} alt=""/>
-              <h3>Educate your employees to get better results</h3>
-            </div>
-            <div className="link">
-              <a href="#">Read More <i className="fa-light fa-arrow-up-right"></i></a>
-            </div>
-          </article>
-          <article className="project-parent">
-            <div className="project-child">
-              <img src={imagefour} alt=""/>
-              <h3>Business Insights is a important piece of your business</h3>
-            </div>
-            <div className="link">
-              <a href="#">Read More <i className="fa-light fa-arrow-up-right"></i></a>
-            </div>
-          </article>
+          <PrintProject image={imageOne} text='Grow your business'/>
+          <PrintProject image={imageTwo} text='Why your client needs a responsive website'/>
+          <PrintProject image={imageThree} text='Educate your employees to get better results'/>
+          <PrintProject image={imagefour} text='Business Insights is a important piece of your business'/>
+
         </div>
         <div className="all-recent">
-          <button className="btn-black">All Recent Projects <i className="fa-light fa-arrow-up-right"></i></button>
+          <Buttons title='All Recent Projects'/>
         </div>
       </div>
   </section>

@@ -7,7 +7,6 @@ export const MassageSection = () => {
   const [emailError, setEmailError] = useState (false)
   const [message, setMessage] = useState ('')
   const [messageError, setMessageError] = useState (false)
-  const [buttonDisabled, setButtonDisabled] = useState ('')
   const [messageSent, setMessageSent] = useState ('')
   const [errorMessage, setErrorMessage] = useState ('')
 

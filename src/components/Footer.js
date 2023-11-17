@@ -1,6 +1,7 @@
 import React from 'react'
 import logoCrito from '../assets/images/Logo.svg'
 import element3 from '../assets/images/Element3.png'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -9,37 +10,37 @@ const Footer = () => {
         <div className="container">
           <div className="logo">
             <div className="space">
-              <a href="index.html"><img src={logoCrito} alt="crito-logo"/></a>
+              <NavLink to="/"><img src={logoCrito} alt="crito-logo"/></NavLink>
               <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</h6>
             </div> 
           </div>
           <div className="Links">
             <h4>Company</h4>
-            <div><a href="#">About</a></div>
-            <div><a href="#">Features</a></div>
-            <div><a href="#">Works</a></div>
-            <div><a href="#">Career</a></div> 
+            <div><NavLink to="/Notfound">About</NavLink></div>
+            <div><NavLink to="/Notfound">Features</NavLink></div>
+            <div><NavLink to="/Notfound">Works</NavLink></div>
+            <div><NavLink to="/Notfound">Career</NavLink></div> 
           </div>
           <div className="Links">
             <h4>Help</h4>
-            <div><a href="#">Customer Support</a></div>
-            <div><a href="#">Delivery Details</a></div>
-            <div><a href="#">Terms & Conditions</a></div>
-            <div><a href="#">Privacy Policy</a></div>
+            <div><NavLink to="/Notfound">Customer Support</NavLink></div>
+            <div><NavLink to="/Notfound">Delivery Details</NavLink></div>
+            <div><NavLink to="/Notfound">Terms & Conditions</NavLink></div>
+            <div><NavLink to="/Notfound">Privacy Policy</NavLink></div>
           </div>
           <div className="Links">
             <h4>Resources</h4>
-            <div><a href="#">Free eBooks</a></div>
-            <div><a href="#">Development Tutorial</a></div>
-            <div><a href="#">How to - Blog</a></div>
-            <div><a href="#">Youtube Playlist</a></div>
+            <div><NavLink to="/Notfound">Free eBooks</NavLink></div>
+            <div><NavLink to="/Notfound">Development Tutorial</NavLink></div>
+            <div><NavLink to="/Notfound">How to - Blog</NavLink></div>
+            <div><NavLink to="/Notfound">Youtube Playlist</NavLink></div>
           </div>
           <div className="Links">
             <h4>Link</h4>
-            <div><a href="#">Free eBooks</a></div>
-            <div><a href="#">Development Tutorial</a></div>
-            <div><a href="#">How to - Blog</a></div>
-            <div><a href="#">Youtube Playlist</a></div>
+            <div><NavLink to="/Notfound">Free eBooks</NavLink></div>
+            <div><NavLink to="/Notfound">Development Tutorial</NavLink></div>
+            <div><NavLink to="/Notfound">How to - Blog</NavLink></div>
+            <div><NavLink to="/Notfound">Youtube Playlist</NavLink></div>
           </div>
         </div>
         <div className="rights-social-media">
@@ -52,16 +53,16 @@ const Footer = () => {
             </h6>
             <div className="socialmedia-bar-bottom">
               <div className="animation">
-                <a href="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                <NavLink to="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></NavLink>
               </div>
               <div className="animation">
-                <a href="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+                <NavLink to="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></NavLink>
               </div>
               <div className="animation">
-                <a href="https://x.com/" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></a>
+                <NavLink to="https://x.com/" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></NavLink>
               </div>
               <div className="animation">
-                <a href="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+                <NavLink to="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></NavLink>
               </div>
             </div>
           </div>

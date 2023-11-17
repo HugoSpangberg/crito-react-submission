@@ -1480,3 +1480,34 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   width: 100%;
   font-weight: 400;
 }
+
+.not-found {
+  background-color: #F0EFE9;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found h1 {
+  font-size: 800;
+}
+.not-found p {
+  margin-top: 20px;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.not-found .rotating {
+  font-size: 50px;
+  padding: 20px;
+  animation: rotate360 4s linear infinite;
+}
+.not-found .btn-yellow {
+  width: 50%;
+}

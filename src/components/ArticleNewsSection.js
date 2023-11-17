@@ -26,11 +26,11 @@ const ArticleNewsSection = () => {
           
         </div>
         <div className="dots-parent">
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div id="dots2" className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
-          <a href=""><div className="dots"></div></a>
+          <Link to=""><div className="dots"></div></Link>
+          <Link to=""><div id="dots2" className="dots"></div></Link>
+          <Link to=""><div className="dots"></div></Link>
+          <Link to=""><div className="dots"></div></Link>
+          <Link to=""><div className="dots"></div></Link>
         </div>
       </div>
     </section>

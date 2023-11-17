@@ -1679,3 +1679,35 @@ header {
     }
   }
 }
+
+.not-found {
+  background-color: #F0EFE9;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 800;
+  }
+  p{
+    margin-top: 20px;
+  }
+
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    font-size: 50px;
+    padding: 20px;
+    animation: rotate360 4s linear infinite;
+  }
+  .btn-yellow{
+    width: 50%;
+  }
+}

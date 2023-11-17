@@ -3,6 +3,7 @@ import ClientOne from '../assets/images/client1.png'
 import ClientTwo from '../assets/images/client2.png'
 import ClientThree from '../assets/images/client3.png'
 import PrintSectionTitle from './generics/PrintSectionTitle'
+import PrintReview from './generics/PrintReview'
 
 
 
@@ -12,60 +13,9 @@ const TestimonialSection = () => {
       <div className="container">
           <PrintSectionTitle section="Testimonial" title="What Our Client Says"/>
           <div className="clients">
-            <div className="clients-parent">
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Laudantium libero, ad dignissimos velit 
-                qui, dolorum obcaecati cum saepe nesciunt 
-                nemo eligendi numquam voluptate"</p>
-                <div className="client-child">
-                  <img src={ClientOne} alt=""/>
-                  <div className="text-child">
-                    <h4>Cassandra Warren</h4>
-                    <p>Business Manager, Dorfus</p>
-                  </div>
-                </div>
-            </div>
-            <div className="clients-parent">
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Laudantium libero, ad dignissimos velit 
-                qui, dolorum obcaecati cum saepe nesciunt 
-                nemo eligendi numquam voluptate"</p>
-                <div className="client-child">
-                  <img src={ClientTwo} alt=""/>
-                  <div className="text-child">
-                    <h4>Amanda Tulling</h4>
-                    <p>Senior Developer, Square</p>
-                  </div>
-                </div>
-            </div>
-            <div className="clients-parent">
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <i className="fa-sharp fa-solid fa-star"></i>
-              <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Laudantium libero, ad dignissimos velit 
-                qui, dolorum obcaecati cum saepe nesciunt 
-                nemo eligendi numquam voluptate"</p>
-                <div className="client-child">
-                  <img src={ClientThree} alt=""/>
-                  <div className="text-child">
-                    <h4>Jack McDogglas</h4>
-                    <p>Key Account Manager, Gobona</p>
-                  </div>
-                </div>
-            </div>
+            <PrintReview image={ClientOne} name='Cassandra Warren' title='Business Manager, Dorfus'/>
+            <PrintReview image={ClientTwo} name='Amanda Tulling' title='Senior Developer, Square'/>
+            <PrintReview image={ClientThree} name='Jack McDogglas' title='Key Account Manager, Gobona'/>
           </div>
         <div className="all-reviews">
           <button className="btn-black">All Reviews <i className="fa-light fa-arrow-up-right"></i></button>

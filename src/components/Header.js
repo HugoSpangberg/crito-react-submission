@@ -16,29 +16,29 @@ const Header = () => {
           </div>
           <div className="contactinformation-bar">
             <div className="content-box transition">
-              <a href="tel:+46812147050"><i className="fa-light fa-phone-volume"></i> 
-                +46 (8) 121 470 50</a>
+              <NavLink to="tel:+46812147050"><i className="fa-light fa-phone-volume"></i> 
+                +46 (8) 121 470 50</NavLink>
             </div>
             <div className="content-box transition">
-              <a href="mailto:info@crito.com"><i className="fa-light fa-envelope"></i>info@crito.com</a>
+              <NavLink to="mailto:info@crito.com"><i className="fa-light fa-envelope"></i>info@crito.com</NavLink>
             </div>
             <div className="content-box last transition">
-              <a href="https://maps.app.goo.gl/wX6Ene3Z18Sfc3NE7"><i className="fa-light fa-location-dot"></i>
-                Sveavägen 31, 111 34 STOCKHOLM</a>
+              <NavLink to="https://maps.app.goo.gl/wX6Ene3Z18Sfc3NE7"><i className="fa-light fa-location-dot"></i>
+                Sveavägen 31, 111 34 STOCKHOLM</NavLink>
             </div>
           </div>
           <div className="socialmedia-bar">
             <div className="animation">
-              <a href="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+              <NavLink to="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></NavLink>
             </div>
             <div className="animation">
-              <a href="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+              <NavLink to="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></NavLink>
             </div>
             <div className="animation">
-              <a href="https://x.com/" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></a>
+              <NavLink to="https://x.com/" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></NavLink>
             </div>
             <div className="animation">
-              <a href="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+              <NavLink to="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></NavLink>
             </div>
           </div>
           <div className="menu">

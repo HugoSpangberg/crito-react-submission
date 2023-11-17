@@ -12,7 +12,7 @@ function imageList () {
 
   return imagePaths.map ((path, index) => (
     <img key={index} src={path} alt={`image ${index + 1}`}/>
-  ));
+  ))
 }
 
 const SponsorSection = () => {
