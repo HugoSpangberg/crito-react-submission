@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Buttons from '../components/generics/Buttons'
 import Header from '../components/Header'
-import { NavLink } from 'react-router-dom'
+
 
 const NotFound = () => {
   return (

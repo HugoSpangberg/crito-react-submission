@@ -1423,6 +1423,12 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
   text-align: center;
   width: 40%;
 }
+.massage .container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .massage .container form .error-bar {
   background-color: rgb(255, 247, 247);
   border: 1px solid red;
@@ -1451,12 +1457,22 @@ header .container .menu nav a.active::after, header .container .menu nav a:hover
 }
 .massage .container form .message-sent {
   display: flex;
+  padding: 5px 12px;
+  align-items: center;
+  color: green;
+  border: 1px solid white;
+  border-radius: 26px;
+  background-color: white;
+}
+.massage .container form .message-sent p {
+  margin: 0;
+  margin-right: 5px;
   justify-content: center;
   align-items: center;
 }
 .massage .container form .message-sent i {
   color: rgb(36, 162, 36);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .massage .container form input {
   width: 100%;

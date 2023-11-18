@@ -34,11 +34,10 @@ const MeetOurTeamSection = () => {
           </div>
         </div>
         <div className="dots-parent">
-          <NavLink to=""><div className="dots"></div></NavLink>
-          <NavLink to=""><div id="dots2" className="dots"></div></NavLink>
-          <NavLink to=""><div className="dots"></div></NavLink>
-          <NavLink to=""><div className="dots"></div></NavLink>
-          <NavLink to=""><div className="dots"></div></NavLink>
+          <a href=""><div className="dots"></div></a>
+          <a href=""><div id="dots2" className="dots"></div></a>
+          <a href=""><div className="dots"></div></a>
+          <a href=""><div className="dots"></div></a>
         </div>
       </div>
     </section>

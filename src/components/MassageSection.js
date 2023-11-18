@@ -77,7 +77,7 @@ export const MassageSection = () => {
       switch (result.status) {
         case 200:
           console.log(result)
-          setMessageSent('Send')
+          setMessageSent('Message Sent')
           setName('')
           setEmail('')
           setMessage('')
@@ -107,8 +107,12 @@ export const MassageSection = () => {
         <label className={` ${messageError ? 'error-message' : ''}`}>{` ${messageError ? 'Please write a message with at least 10 characters.' : ''}`}</label>
         <button type="submit" className={`btn-yellow` }>Send Message<i className="fa-light fa-arrow-up-right"></i></button>
         <div className={`${errorMessage ? 'error-message-middle' : ''}${messageSent ? 'message-sent' : ''}`}>
-          <p>{errorMessage}<i className={` ${errorMessage ? 'fa-solid fa-triangle-exclamation' : ''}`}></i></p>
-          <i className={`${messageSent ? 'fa-sharp fa-solid fa-circle-check' : ''}`}></i>
+          <p>{errorMessage}<i className={` ${errorMessage ? 'message-sent' : ''}`}></i></p>
+          <div className={`${messageSent ? 'message-sent' : ''}`}>
+           <p className={`${messageSent ? '' : ''}`}>{messageSent}</p>
+           <i className={`${messageSent ? 'fa-sharp fa-solid fa-circle-check' : ''}`}></i>
+          </div>
+
         </div>
       </form>
     </div>

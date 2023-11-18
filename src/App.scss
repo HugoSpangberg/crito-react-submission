@@ -1609,7 +1609,10 @@ header {
 
     }
     form {
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       .error-bar {
         background-color: rgb(255, 247, 247);
         border: 1px solid red;
@@ -1641,12 +1644,26 @@ header {
       }
       .message-sent {
         display: flex;
-        justify-content: center;
+        padding: 5px 12px;
         align-items: center;
+        color: green;
+        border: 1px solid white;
+        border-radius: 26px;
+        background-color: white;
+        
+
+        p{
+      
+          margin: 0;
+          margin-right: 5px;
+          justify-content: center;
+          align-items: center;
+        }
+
         i {
 
           color: rgb(36, 162, 36);
-          font-size: 3rem;
+          font-size: 2rem;
 
         }
       }
